@@ -33,6 +33,8 @@
     </MainSourceTransferCommand>
     <AllowChangingHostForMainCommands>false</AllowChangingHostForMainCommands>
     <SkipBuildIfNoSourceFilesChanged>false</SkipBuildIfNoSourceFilesChanged>
+    <IgnoreFileTransferErrors>false</IgnoreFileTransferErrors>
+    <RemoveRemoteDirectoryOnClean>false</RemoveRemoteDirectoryOnClean>
   </Project>
   <Build xsi:type="com.visualgdb.build.make">
     <MakeFilePathRelativeToSourceDir>Makefile</MakeFilePathRelativeToSourceDir>
@@ -71,7 +73,7 @@
     <MakeCommandTemplate>
       <SkipWhenRunningCommandList>false</SkipWhenRunningCommandList>
       <RemoteHost>
-        <HostName>10.0.201.209</HostName>
+        <HostName>10.0.201.210</HostName>
         <Transport>SSH</Transport>
         <UserName>root</UserName>
       </RemoteHost>
@@ -114,6 +116,8 @@
       <ExamineMemoryWithXCommand>false</ExamineMemoryWithXCommand>
       <StepIntoNewInstanceEntry>main</StepIntoNewInstanceEntry>
       <ExamineRegistersInRawFormat>true</ExamineRegistersInRawFormat>
+      <EnableSmartStepping>false</EnableSmartStepping>
+      <DisableSignals>false</DisableSignals>
     </AdditionalGDBSettings>
     <LaunchGDBSettings xsi:type="GDBLaunchParametersNewInstance">
       <GDBEnvironment>
@@ -133,6 +137,7 @@
     <KeepConsoleAfterExit>false</KeepConsoleAfterExit>
     <RunGDBUnderSudo>false</RunGDBUnderSudo>
     <SkipDeployment>false</SkipDeployment>
+    <DeployWhenLaunchedWithoutDebugging>true</DeployWhenLaunchedWithoutDebugging>
   </Debug>
   <CustomBuild>
     <PreBuildActions />

@@ -72,7 +72,10 @@
 #define __THUMB_INTERWORK__ 1
 #define __INT_FAST16_TYPE__ int
 #define __LDBL_HAS_DENORM__ 1
+//VS2005-2012 treats all files as C++, while VS2013+ can treat C files correctly.
+#if _MSC_VER < 1800 || defined(__cplusplus)
 #define __cplusplus 1
+#endif
 #define __DEC128_MAX__ 9.999999999999999999999999999999999E6144DL
 #define __INT_LEAST32_MAX__ 2147483647
 #define __DEC32_MIN__ 1E-95DF

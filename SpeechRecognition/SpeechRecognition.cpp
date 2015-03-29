@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdio.h>
 
 #include <julius/juliuslib.h>
 

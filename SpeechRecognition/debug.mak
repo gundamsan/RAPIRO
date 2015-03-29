@@ -13,17 +13,17 @@ OBJCOPY := objcopy
 
 #Additional flags
 PREPROCESSOR_MACROS := DEBUG
-INCLUDE_DIRS :=/home/pi/julius-4.3.1/libjulius/include
-LIBRARY_DIRS :=/usr/lib /home/pi/julius-4.3.1/libjulius /home/pi/julius-4.3.1/libsent
-LIBRARY_NAMES :=julius sent pthread dl
-ADDITIONAL_LINKER_INPUTS :=-lz
-MACOS_FRAMEWORKS :=
+INCLUDE_DIRS := /home/pi/julius-4.3.1/libjulius/include
+LIBRARY_DIRS := /usr/lib /home/pi/julius-4.3.1/libjulius /home/pi/julius-4.3.1/libsent
+LIBRARY_NAMES := julius sent pthread dl sndfile asound
+ADDITIONAL_LINKER_INPUTS := -lz -lrt -lm
+MACOS_FRAMEWORKS := 
 
 CFLAGS := -ggdb -ffunction-sections -O0
 CXXFLAGS := -ggdb -ffunction-sections -O0
-ASFLAGS :=
+ASFLAGS := 
 LDFLAGS := -Wl,-gc-sections
-COMMONFLAGS :=
+COMMONFLAGS := 
 
 START_GROUP := -Wl,--start-group
 END_GROUP := -Wl,--end-group
